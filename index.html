@@ -4,38 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اليوم العالمي للضمير</title>
+    <!-- Importing a cleaner font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="top-quote">" أنت أمل العالم "</div>
-        <nav>
-            <a href="#">الصفحة الرئيسية</a>
-            <a href="#">من نحن</a>
+        <div class="quote">" أنت أمل العالم "</div>
+        <nav class="nav-links">
             <a href="#">تواصل معنا</a>
+            <a href="#">من نحن</a>
+            <a href="#">الصفحة الرئيسية</a>
         </nav>
-        <div class="logo">
-            <img src="logo-placeholder.png" alt="Logo">
+        <div class="logo-placeholder">
+            <div class="circle-logo">❤️</div>
         </div>
     </header>
 
-    <main class="hero-section">
-        <div class="image-container">
-            <img src="community-work.jpg" alt="Volunteers working">
+    <section class="hero">
+        <div class="hero-image-wrapper">
+             <!-- Referencing IMG-20260512-WA0003.jpg context -->
+            <img src="IMG-20260512-WA0003.jpg" alt="Volunteers" class="main-img">
         </div>
         
-        <div class="content-overlay">
-            <h1>اليوم العالمي للضمير</h1>
-            <p class="sub-text">مساهمة بسيطة تصنع</p>
-            <p class="highlight-text">فرقاً في حياة <span>شخص</span></p>
+        <div class="hero-overlay">
+            <div class="text-content">
+                <h1>اليوم العالمي للضمير</h1>
+                <p>مساهمة بسيطة تصنع</p>
+                <p>فرقاً في حياة <span class="highlight">شخص</span></p>
+            </div>
         </div>
 
-        <div class="social-icons">
-            <div class="icon">📞</div>
-            <div class="icon">f</div>
+        <div class="floating-socials">
+            <div class="social-btn">📞</div>
+            <div class="social-btn">f</div>
         </div>
-    </main>
+    </section>
 
 </body>
 </html>
