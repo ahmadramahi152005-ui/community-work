@@ -1,0 +1,104 @@
+:root {
+    --primary-red: #d64550;
+    --gold-bg: #f7d29a;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--gold-bg);
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--gold-bg);
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4a1a1a;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 60%;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The Curved Red Background */
+.content-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--primary-red);
+    clip-path: ellipse(100% 100% at 100% 50%); /* Creates the curve */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 80px;
+    color: white;
+    text-align: right;
+}
+
+.content-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    font-size: 2rem;
+    margin: 5px 0;
+}
+
+.highlight-text {
+    font-size: 2.5rem;
+}
+
+.highlight-text span {
+    color: #fff9c4; /* Yellowish highlight for "شخص" */
+}
+
+/* Floating Social Icons */
+.social-icons {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.icon {
+    background: white;
+    color: var(--primary-red);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
