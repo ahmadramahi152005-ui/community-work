@@ -1,104 +1,120 @@
-:root {
-    --primary-red: #d64550;
-    --gold-bg: #f7d29a;
-    --white: #ffffff;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: var(--gold-bg);
-    overflow-x: hidden;
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f7d29a;
+    color: #4a1a1a;
 }
 
-/* Navbar Styling */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background-color: var(--gold-bg);
+    padding: 10px 40px;
+    background-color: #f7d29a;
+    z-index: 10;
 }
 
-.navbar nav a {
-    margin: 0 15px;
+.nav-links a {
+    margin-left: 30px;
     text-decoration: none;
     color: #4a1a1a;
     font-weight: bold;
 }
 
-/* Hero Section */
-.hero-section {
-    position: relative;
-    height: 85vh;
+.circle-logo {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border: 2px solid #d64550;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
     overflow: hidden;
 }
 
-.image-container {
+.hero-image-wrapper {
     width: 60%;
     height: 100%;
 }
 
-.image-container img {
+.main-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* The Curved Red Background */
-.content-overlay {
+/* The Red Curved Overlay - Improved */
+.hero-overlay {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-color: var(--primary-red);
-    clip-path: ellipse(100% 100% at 100% 50%); /* Creates the curve */
+    top: -10%;
+    right: -10%;
+    width: 65%;
+    height: 120%;
+    background: #d64550;
+    /* This creates the smooth "S" curve from your original image */
+    border-radius: 40% 0 0 60%; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 80px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10%;
     color: white;
-    text-align: right;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
 }
 
-.content-overlay h1 {
-    font-size: 3rem;
+.text-content {
+    text-align: right;
+    max-width: 500px;
+}
+
+.text-content h1 {
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
-.sub-text {
-    font-size: 2rem;
-    margin: 5px 0;
+.text-content p {
+    font-size: 2.2rem;
+    line-height: 1.2;
 }
 
-.highlight-text {
-    font-size: 2.5rem;
+.highlight {
+    color: #ffeb3b; /* Bright yellow from the original photo */
 }
 
-.highlight-text span {
-    color: #fff9c4; /* Yellowish highlight for "شخص" */
-}
-
-/* Floating Social Icons */
-.social-icons {
+/* Social Buttons */
+.floating-socials {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.icon {
+.social-btn {
+    width: 45px;
+    height: 45px;
     background: white;
-    color: var(--primary-red);
-    width: 40px;
-    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    color: #d64550;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
