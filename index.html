@@ -1,298 +1,595 @@
 <!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>اليوم العالمي للضمير</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     
+
     <style>
+
         :root {
+
             --header-bg: #f8dfa8;
+
             --main-text-color: #633615;
+
             --highlight: #f9d774;
+
             --text-on-red: #ffffff;
+
         }
+
+
 
         html { scroll-behavior: smooth; }
 
+
+
         body {
+
             margin: 0;
+
             padding: 0;
+
             font-family: 'Tajawal', sans-serif;
+
             background-color: #ffffff;
+
             overflow-x: hidden;
+
         }
+
+
 
         header {
+
             background-color: var(--header-bg);
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             padding: 10px 40px;
+
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
+
         }
+
+
 
         .logo {
+
             width: 60px;
+
             height: 60px;
+
             background-color: white;
+
             border-radius: 50%;
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
             overflow: hidden;
+
         }
+
+
 
         .logo img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: contain;
+
         }
+
+
 
         nav ul {
+
             list-style: none;
+
             display: flex;
+
             gap: 40px;
+
             margin: 0;
+
             padding: 0;
+
         }
 
+
+
         nav a {
+
             text-decoration: none;
+
             color: var(--main-text-color);
+
             font-weight: 800;
+
             font-size: 1.1rem;
+
             transition: color 0.3s ease;
+
         }
+
+
 
         nav a:hover { color: #ea5c52; }
 
+
+
         .slogan {
+
             color: var(--main-text-color);
+
             font-weight: 800;
+
             font-size: 1rem;
+
         }
+
+
 
         /* --- التعديل هنا ليتناسب مع الصورة الجديدة --- */
+
         .hero {
+
             position: relative;
+
             display: flex;
+
             justify-content: flex-start;
+
             align-items: center;
+
             min-height: 100vh;
+
             overflow: hidden;
+
             /* تم تحديث اسم الملف هنا */
+
             background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('WhatsApp_Image_2026-05-12_at_9.39.51_PM.jpeg.png');
+
             background-size: cover;
+
             background-position: center;
+
             background-attachment: fixed; /* يعطي تأثير جمالي عند التمرير */
+
         }
+
+
 
         .hero-text {
+
             position: relative;
+
             z-index: 2;
+
             width: 50%; 
+
             padding-right: 8%;
+
             color: var(--text-on-red);
+
         }
+
+
 
         .hero-text h1 {
+
             font-size: 2.8rem;
+
             margin-bottom: 25px;
+
             text-shadow: 3px 3px 6px rgba(0,0,0,0.5); /* تقوية الظل لبروز النص */
+
         }
 
+
+
         .hero-text h2 {
+
             font-size: 3rem;
+
             line-height: 1.4;
+
             margin: 0;
+
             text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
         }
+
+
 
         .highlight { color: var(--highlight); }
 
+
+
         .social-icons {
+
             position: absolute;
+
             bottom: 30px;
+
             right: 30px;
+
             display: flex;
+
             flex-direction: column;
+
             gap: 15px;
+
             z-index: 10;
+
         }
 
+
+
         .social-icons i {
+
             background-color: white;
+
             color: #ea5c52;
+
             width: 40px;
+
             height: 40px;
+
             border-radius: 50%;
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             font-size: 1.3rem;
+
             cursor: pointer;
+
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
             transition: transform 0.3s ease;
+
         }
+
+
 
         .social-icons i:hover { transform: scale(1.1); }
 
+
+
         /* باقي الأقسام */
+
         .content-section, .contact-section {
+
             padding: 70px 40px;
+
             text-align: center;
+
             background-color: #ffffff; 
+
         }
+
+
 
         .about-us-section { 
+
             padding: 70px 40px;
+
             text-align: center;
+
             background-color: #fcf3df; 
+
         }
+
+
 
         .section-title {
+
             color: #ea5c52;
+
             font-size: 2.4rem;
+
             margin-top: 0;
+
             margin-bottom: 25px;
+
             font-weight: 800;
+
         }
+
+
 
         .section-text {
+
             color: var(--main-text-color);
+
             font-size: 1.2rem;
+
             line-height: 1.8;
+
             max-width: 850px;
+
             margin: 0 auto;
+
         }
+
+
 
         .contact-container {
+
             display: flex;
+
             justify-content: center;
+
             gap: 50px;
+
             max-width: 1000px;
+
             margin: 40px auto 0;
+
             flex-wrap: wrap;
+
         }
+
+
 
         .contact-details, .contact-form-design {
+
             flex: 1;
+
             min-width: 300px;
+
             text-align: right;
+
         }
 
+
+
         .contact-item {
+
             display: flex;
+
             align-items: center;
+
             gap: 15px;
+
             margin-bottom: 25px;
+
             font-size: 1.1rem;
+
             color: var(--main-text-color);
+
         }
+
+
 
         .contact-item i { color: #ea5c52; font-size: 1.4rem; }
 
+
+
         .contact-form-design h4 {
+
             color: #ea5c52;
+
             font-size: 1.6rem;
+
             margin-top: 0;
+
             margin-bottom: 20px;
+
         }
+
+
 
         .form-group { margin-bottom: 20px; }
+
         .form-group label { display: block; margin-bottom: 8px; font-weight: bold; font-size: 0.95rem; color: var(--main-text-color); }
+
         .form-group input, .form-group textarea {
+
             width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Tajawal', sans-serif; font-size: 0.95rem; color: var(--main-text-color); box-sizing: border-box; 
+
         }
+
+
 
         .submit-btn {
+
             background-color: #ea5c52; color: white; border: none; padding: 10px 25px; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s;
+
         }
+
         .submit-btn:hover { background-color: #d1463e; }
 
+
+
         @media (max-width: 900px) {
+
             header { flex-direction: column; gap: 15px; text-align: center; position: static; }
+
             nav ul { flex-direction: column; gap: 15px; }
+
             .hero-text { width: 100%; padding: 20px; text-align: center; }
+
             .hero { background-attachment: scroll; } /* إلغاء التثبيت في الموبايل لسرعة التصفح */
+
             .section-title { font-size: 1.9rem; }
+
             .contact-container { flex-direction: column; gap: 30px; }
+
             .contact-item { justify-content: center; }
+
         }
+
     </style>
+
 </head>
+
 <body>
 
+
+
     <header>
+
         <div class="logo">
+
             <img src="logo.png" alt="الشعار">
+
         </div>
+
         <nav>
+
             <ul>
+
                 <li><a href="#home">الصفحة الرئيسية</a></li>
+
                 <li><a href="#about">من نحن</a></li>
+
                 <li><a href="#contact">تواصل معنا</a></li>
+
             </ul>
+
         </nav>
+
         <div class="slogan">- أنت أمل العالم -</div>
+
     </header>
 
+
+
             <div class="social-icons">
+
             <i class="fas fa-phone"></i>
+
             <i class="fab fa-facebook-f"></i>
+
         </div>
+
     </main>
 
+
+
     <!-- باقي المحتوى كما هو -->
+
     <section class="content-section">
+
         <h3 class="section-title">رسالتنا</h3>
+
         <p class="section-text">
+
             نؤمن بأن الضمير الحي هو الأساس لبناء مجتمعات مترابطة تسودها قيم العدالة والسلام.
+
         </p>
+
     </section>
+
+
 
     <section class="about-us-section" id="about">
+
         <h3 class="section-title">من نحن</h3>
+
         <p class="section-text">
+
             نحن مجموعة من المتطوعين والمهتمين بالعمل الإنساني والمجتمعي...
+
         </p>
+
     </section>
+
+
 
     <section class="contact-section" id="contact">
+
         <h3 class="section-title">تواصل معنا</h3>
+
         <div class="contact-container">
+
             <div class="contact-details">
+
                 <div class="contact-item">
+
                     <i class="fas fa-envelope"></i>
+
                     <span>info@conscienceday.org</span>
+
                 </div>
+
                 <div class="contact-item">
+
                     <i class="fas fa-phone"></i>
+
                     <span>+962 7XXXXXXXX</span>
+
                 </div>
+
             </div>
+
             <div class="contact-form-design">
+
                 <h4>أو أرسل لنا رسالة</h4>
+
                 <div class="form-group">
+
                     <input type="text" placeholder="الاسم">
+
                 </div>
+
                 <div class="form-group">
+
                     <input type="email" placeholder="البريد الإلكتروني">
+
                 </div>
+
                 <div class="form-group">
+
                     <textarea rows="4" placeholder="الرسالة"></textarea>
+
                 </div>
+
                 <button type="submit" class="submit-btn">إرسال</button>
+
             </div>
+
         </div>
+
     </section>
 
+
+
 </body>
+
 </html>
